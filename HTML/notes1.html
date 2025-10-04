@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>My Notes 1</title>
+    </head>
+    <body>
+        <pre>
+1. planning
+2. design
+3. content creation
+4. sever side scripting
+5. testing
+6. deployment
+7. maintenance
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+frontend --&gt;
+    html (hyper text markup language) => HYPER TEXT IS JUST CLICKABLE TEXT
+    css (cascading style sheet)
+    js (javaScript)
+backend --&gt;
+    python
+    java
+    javaScript
+    PHP
+    ruby
+database --&gt;
+    mySQL
+    postgreSQL
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+HTML - DOCUMENT 📄
+HTTP - CARRIER 🚚
+URL - ADDRESS/LOCATION 📍
+WWW - The entire global library system 🌍📚
+
+dynamic pages are ==> auto reload inside page,
+it will auto update showing new without making an changes
+
+    Modern browsers have two main rendering modes:
+        1.Standards mode: Follows HTML/CSS specifications strictly.
+        2.Quirks mode: Tries to emulate old browsers from the 1990s.
+                       old traffic rules from decades ago
+                       some things work differently to avoid breaking old websites.
+
+&lt;!doctype HTMl &gt;
+    1.declaration
+    2.modern rules (modern rules se treat karega)
+    It’s called a doctype declaration.
+    It tells the browser which version of HTML the page is using, so the browser can render it correctly.
+
+    **if this is not written then it will run on quirks mode**
+    Without the doctype, most browsers enter quirks mode by default.
+        Layout and styling may break
+        CSS may behave differently (e.g., box model differences, margin/padding calculations).
+        Some features in HTML5 or modern CSS may not work as expected.
+        JavaScript may behave inconsistently
+        Certain DOM properties or CSS measurements may return unexpected values
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+&lt;html lang="en"&gt; used for :-
+        screen reader
+        search engine
+        so that they can understand / work  language on its basis
+        
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+        The &lt;meta&gt; tag provides metadata about the HTML document.
+        Metadata is “data about data,” meaning information about your web page 
+        that does not appear directly on the page but is used by browsers,
+        search engines, and other services.
+                &lt;meta charset="UTF-8"&gt; used for :-
+                    specifies that the HTML document uses UTF-8 character encoding,
+                    ensuring that all Unicode characters (letters, symbols, emojis, etc.)
+                    are displayed correctly by the browser.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+&lt; hr &gt; 
+    tag tells / used to divide sections of page and draws an line horizontally on whole page,
+    its not just for decoration of the page
+&lt; b &gt; (Bold)
+    Purpose: Just for visual styling—makes text appear bold.
+    Semantics: None. It doesn’t indicate importance or any special meaning.
+&lt; strong &gt;
+    Purpose: Indicates strong importance or emphasis.
+    Semantics: Has meaning for assistive technologies (like screen readers, SEO). Screen readers might read &lt;strong&gt; text with emphasis.
+&lt; i &gt; (Italic)
+    Purpose: Just for visual styling—makes text italic.
+    Semantics: None. Doesn’t imply emphasis or meaning.
+&lt; em &gt; (Emphasis)
+
+Purpose: Indicates emphasized text—something that should be stressed.
+Semantics: Important for screen readers and accessibility. Screen readers might change tone or pause slightly.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+we can also use the escape sequence in html to write the things like lower than symbol
+for example:-
+&gt; --&gt; this if written in html code will print >
+&lt; --&gt; this if written in html code will print <
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+The &lt;pre&gt; tag in HTML stands for “preformatted text”. Its main purpose is to display text exactly as you type it, preserving all:
+    - Spaces (including multiple spaces or tabs)
+    - Line breaks (new lines)
+    - Indentation
+
+we can also use anchor tags to redirect towards the next page
+we can use # in attribute href 
+    for example:- """ &lt;a href="#"&gt;comming soon&lt;/a&gt; """
+    In the above example, # acts as a placeholder — it will not redirect to another page.
+    Clicking it will jump to the top of the current page.
+    Similarly, using #top works the same way if there is an element with id="top" on the page.
+
+What is href?
+    href stands for Hypertext Reference.
+    It specifies the URL or link where the anchor should navigate.
+
+
+What is target?
+    target specifies where the linked page should open.
+        Common values:
+            _blank → opens in a new tab or window
+            _self → opens in the same frame/tab (default)
+            _parent → opens in the parent frame
+            _top → opens in the full body of the window, breaking out of frames
+
+            The default value of the target attribute is: _self
+            This means if you don’t specify target, the link will open in the same tab or window where the link was clicked.
+-------------------------------------------------------------------------------------------------------------------------------------------------
+        </pre>
+        <hr>
+        <a href="index.html"> Home page</a><br>
+        <a href="myConfusions.html"> Confusions</a><br>
+        <a href="contactUs.html"> Contact Us</a><br>
+        <a href="downloadMedia.html"> Download Content</a>
+    </body>
+</html>
