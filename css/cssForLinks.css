@@ -1,12 +1,22 @@
-            .links {
-                color: #1a73e8;            
-                text-decoration: none;            
-                font-family: Arial, sans-serif;
-                transition: color 0.3s;  
-            }
-
-            .links:hover {
-                color: #ff6600;          
-                text-decoration: underline; 
-                cursor: pointer;          
-            }
+.links {
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(125, 138, 8);
+    padding: 5px;
+    margin: 20px;
+    background-color: rgb(127, 255, 0);
+    font-size: 30px;
+    display: inline-block;
+    padding-left: auto;
+    color: rgb(172, 2, 157);
+}
+.links:hover{
+    border-color: rgb(26, 29, 219);
+    color: rgb(26, 29, 219);
+    display: inline-block;
+}
+.links:focus{
+    color: red;
+    border-color: red;
+    border-color: red;
+}
