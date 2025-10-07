@@ -1,0 +1,43 @@
+.image {   
+    width: 400px;
+    height: 180px;
+    object-fit:fill;
+    border-radius: 20px;
+    margin: 50px;
+}
+
+#luffy_edit_video{
+    width: 500px;
+    height: auto;
+    object-fit:cover;
+    object-position: top center;
+    border-radius: 40px;
+    margin: 50px;
+}
+#blinks_no_sake_audio{
+    margin: 50px;
+}
+
+#luffy_amv_iframe{
+    width: 500px;
+    height: 281.25px;
+    object-fit:cover;
+    object-position: top center;
+    border-radius: 40px;
+    margin: 50px;
+}
+body{
+    background-color: rgb(132, 226, 220);
+}
+#blinks_no_sake_audio{
+    accent-color: rgb(42, 50, 52);
+}
+
+/* 
+phones have arround 
+width: 950px;
+height: 1900px;
+
+
+thats exact for my phone when i run that on chrome
+*/

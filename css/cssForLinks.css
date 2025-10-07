@@ -1,0 +1,12 @@
+            .links {
+                color: #1a73e8;            
+                text-decoration: none;            
+                font-family: Arial, sans-serif;
+                transition: color 0.3s;  
+            }
+
+            .links:hover {
+                color: #ff6600;          
+                text-decoration: underline; 
+                cursor: pointer;          
+            }

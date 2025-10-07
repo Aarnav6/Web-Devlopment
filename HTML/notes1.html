@@ -14,7 +14,7 @@
 6. deployment
 7. maintenance
 
-------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 frontend --&gt;
     html (hyper text markup language) => HYPER TEXT IS JUST CLICKABLE TEXT
@@ -30,7 +30,7 @@ database --&gt;
     mySQL
     postgreSQL
 
-------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 HTML - DOCUMENT 📄
 HTTP - CARRIER 🚚
@@ -60,14 +60,14 @@ it will auto update showing new without making an changes
         JavaScript may behave inconsistently
         Certain DOM properties or CSS measurements may return unexpected values
 
-------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 &lt;html lang="en"&gt; used for :-
         screen reader
         search engine
         so that they can understand / work  language on its basis
         
-------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
         The &lt;meta&gt; tag provides metadata about the HTML document.
         Metadata is “data about data,” meaning information about your web page 
@@ -79,7 +79,7 @@ it will auto update showing new without making an changes
                     are displayed correctly by the browser.
 
 
-------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 &lt; hr &gt; 
     tag tells / used to divide sections of page and draws an line horizontally on whole page,
@@ -98,14 +98,14 @@ it will auto update showing new without making an changes
 Purpose: Indicates emphasized text—something that should be stressed.
 Semantics: Important for screen readers and accessibility. Screen readers might change tone or pause slightly.
 
--------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 we can also use the escape sequence in html to write the things like lower than symbol
 for example:-
 &gt; --&gt; this if written in html code will print >
 &lt; --&gt; this if written in html code will print <
 
--------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The &lt;pre&gt; tag in HTML stands for “preformatted text”. Its main purpose is to display text exactly as you type it, preserving all:
     - Spaces (including multiple spaces or tabs)
@@ -126,20 +126,34 @@ What is href?
 
 What is target?
     target specifies where the linked page should open.
-        Common values:
-            _blank → opens in a new tab or window
-            _self → opens in the same frame/tab (default)
-            _parent → opens in the parent frame
-            _top → opens in the full body of the window, breaking out of frames
+    Common values:
+        _blank → opens in a new tab or window
+        _self → opens in the same frame/tab (default)
+        _parent → opens in the parent frame
+        _top → opens in the full body of the window, breaking out of frames
 
-            The default value of the target attribute is: _self
-            This means if you don’t specify target, the link will open in the same tab or window where the link was clicked.
--------------------------------------------------------------------------------------------------------------------------------------------------
+           The default value of the target attribute is: _self
+           This means if you don’t specify target, the link will open in the same tab or window where the link was clicked.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+The alt attribute in the &lt;img&gt; tag is used to describe the image for screen readers 
+(to help visually impaired users),and is also used by search engines 
+like Google to understand and index images.
+    🧏 Accessibility: Screen readers read out the alt text to describe the image for users who can’t see it.
+    🔍 SEO (Search Engine Optimization): Search engines use the alt text to understand what an image represents — this helps the image appear in Google Image Search results.
+    ⚠️ Fallback: If the image fails to load, the alt text is displayed in its place.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<ol> 
+    <li>we can use start="5" to change the starting of the point for ordered list like &lt;ol start="5"&gt;
+    </li>
+</ol>
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
         </pre>
         <hr>
-        <a href="index.html"> Home page</a><br>
-        <a href="myConfusions.html"> Confusions</a><br>
-        <a href="contactUs.html"> Contact Us</a><br>
-        <a href="downloadMedia.html"> Download Content</a>
+        <a href="../index.html"> Back To Home page</a>
     </body>
 </html>
