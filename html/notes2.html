@@ -11,68 +11,52 @@
     <ol>
         <!-- first point in notes -->
         <li>
-            <dl>
-                <dt>we can use the multiple classes in an element</dt>
-                <dd>such as .highlight .customColourForLinks etc these can be applied to elements example:</dd>
-                <dd>&lt;p class="highlight customColourForLinks"&gt;</dd>
-            </dl>
+            we can use the multiple classes in an element
+            <br>such as .highlight .customColourForLinks etc these can be applied to elements 
+            <br>example: &lt;p class="highlight customColourForLinks"&gt;
         </li>
         <!-- second point in notes -->
         <li>
-            <dl>
-                <dt>we can use various types of selectors in css such as</dt>
-                <dd>
-                    <ol>
-                        <li>element selector: directly typing element name like body{}</li>
-                        <li>class selector( . ): we can use an . symbol to call with class name like .highlight{}</li>
-                        <li>id selector ( # ): we can use an # symbol to call with the id name like #importan_note1</li>
-                        <li>universal selector ( * ): we can use an * symbol to make changes universal and it will affect every single element in the file which is to that css</li>
-                        <li>
-                            <dl>
-                                <dt>Group Selector : we can use Group collection in css we can use , to seprate selections and they can have same type of class</dt>
-                                <dd>example selecting by id #first, #second{} or by class .class1, .class2{}</dd>
-                            </dl>
-                        </li>
-                        <li>
-                            <dl>
-                                <dt>Nesed Selector ( &gt; ): it can be used to nest the css elements</dt>
-                                <dd>example #first>.class1>p{}</dd>
-                                <dd>&gt; : this operator in this context is known as child combinator</dd>
-                                <dd>
-                                    <p> <h4> In Mordern Css This is Valid </h4>
-                                        #first { <br>
-                                          > .class1 { <br>
-                                            > p { <br>
-                                              /* Your styles go here */ <br>
-                                              color: green; <br>
-                                            } <br>
-                                          } <br>
-                                        } <br>
-                                    </p>
-                                </dd>
-                            </dl>
-                        </li>
-                    </ol>
-                </dd>
-            </dl>
+            we can use various types of selectors in css such as:
+            <ol>
+                <li>element selector: directly typing element name like body{}</li>
+                <li>class selector( . ): we can use an . symbol to call with class name like .highlight{}</li>
+                <li>id selector ( # ): we can use an # symbol to call with the id name like #importan_note1</li>
+                <li>universal selector ( * ): we can use an * symbol to make changes universal and it will affect every single element in the file which is to that css</li>
+                <li>
+                    Group Selector : we can use Group collection in css we can use , to seprate selections and they can have same type of class
+                    <br>example: selecting by id #first, #second{} or by class .class1, .class2{}</li>
+                <li>
+                    Selector ( &gt; ): it can be used to nest the css elements
+                    <br>example #first &gt;.class1 &gt;p{}
+                    <br>&gt; : this operator in this context is known as child combinator
+                    <p>In Mordern Css This is Valid
+                        #first { <br>
+                          &gt; .class1 { <br>
+                            &gt; p { <br>
+                              /* Your styles go here */ <br>
+                              color: green; <br>
+                            }
+                          }
+                        }
+                    </p>  
+                </li>
+            </ol>
         </li>
         <!-- third point in notes -->
         <li>
-            <dl>
-                <dt>priority in the css is :</dt>
-                <dd> Rule 1: based on thr selector :
-                    <table border="4" align="center" cellpadding="10px">
-
-                        <thead>
-
-                            <tr>
+            priority in the css works on forwllowing rules :
+            <ol>
+                <li>
+                    Rule 1: based on thr selector :
+                    <table border="4" align="center" cellpadding="10px">   
+                            <thead>
+                                <tr>
                                 <th>Selector Types</th>
                                 <th>Example</th>
                                 <th>Specifcity Value</th>
                             </tr>
-
                         </thead>
-
                         <tbody>
 
                             <tr>
@@ -104,15 +88,23 @@
                                 <td>*</td>
                                 <td>0</td>
                             </tr>
-
                         </tbody>
-
                     </table>
-                </dd>
-                <dd>Rule 2: If two rules have equal importance and specificity, the last one written in the CSS file wins.</dd>
-            </dl>
-           
+                </li>
+
+                <li>
+                    Rule 2: If two rules have equal importance and specificity, 
+                    <br>the last one written in the CSS file wins.
+                </li>
+
+                <li>
+                    Rule 3: Rules with !important override all others
+                    <br>even inline styles (unless the inline style itself also has !important).
+                </li>
+
+            </ol>
         </li>
+        
     </ol>
 
     <hr>
