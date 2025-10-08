@@ -21,13 +21,22 @@
     border-color: red;
 }
 body{
-    background-color:burlywood;
+    background-color:rgb(219, 226, 191);
     font-size: larger;
     font-family: 'Times New Roman', Times, serif;
     font-weight:bold;
     padding: 10px;
-    word-spacing: 5px;
+    word-spacing: 4px;
     line-height: 1.2;
+}
+p, ul, ol, dl, table{
+    background-color:rgb(255, 255, 255);
+    display: inline-block;
+    border-radius: 10px;
+}
+ol{
+    border-style: solid;
+    border-color: aliceblue;
 }
 #centerContainer{
     position: absolute;
