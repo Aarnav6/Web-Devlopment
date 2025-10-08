@@ -15,6 +15,8 @@
             <br>such as .highlight .customColourForLinks etc these can be applied to elements 
             <br>example: &lt;p class="highlight customColourForLinks"&gt;
         </li>
+
+        
         <!-- second point in notes -->
         <li>
             we can use various types of selectors in css such as:
@@ -28,21 +30,26 @@
                     <br>example: selecting by id #first, #second{} or by class .class1, .class2{}</li>
                 <li>
                     Selector ( &gt; ): it can be used to nest the css elements
-                    <br>example #first &gt;.class1 &gt;p{}
                     <br>&gt; : this operator in this context is known as child combinator
-                    <p>In Mordern Css This is Valid
-                        #first { <br>
-                          &gt; .class1 { <br>
-                            &gt; p { <br>
-                              /* Your styles go here */ <br>
-                              color: green; <br>
-                            }
-                          }
-                        }
-                    </p>  
+                    <br>example 1: #first &gt;.class1 &gt;p{}
+                    <br>example 2: In Mordern Css This is Valid:
+                    <!-- bellow its an pre tag was used  -->
+                    <pre>
+    #first { 
+        &gt; .class1 { 
+            &gt; p { 
+                /* Your styles go here */ 
+                color: green; 
+            }
+        }
+    }
+                    </pre>
+                    <!-- above its an pre tag was used  -->
                 </li>
             </ol>
         </li>
+
+
         <!-- third point in notes -->
         <li>
             priority in the css works on forwllowing rules :
@@ -100,11 +107,31 @@
                 <li>
                     Rule 3: Rules with !important override all others
                     <br>even inline styles (unless the inline style itself also has !important).
+                    <br>example:
+                    <!-- bellow its an pre tag was used  -->
+                    <pre>
+    p {
+        color: blue !important; /* This wins */
+        }
+        p {
+        color: red;
+    }
+                    </pre>
+                    <!-- bellow its an pre tag was used  -->
                 </li>
-
             </ol>
         </li>
-        
+
+        <!-- fourth point in notes -->
+        <li>
+            <p>CSS Property vs Values: 
+            <br>CSS Property → the actual property you want to style/animate
+            <br>Example: transition
+            <br>Values → the specific instructions you pass to the property
+            <br>Example: [property] [duration] [timing-function] [delay]
+            </p>
+        </li>
+
     </ol>
 
     <hr>
