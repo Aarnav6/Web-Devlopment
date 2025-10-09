@@ -1,26 +1,28 @@
-.links {
-    border-width: 3px;
-    border-style: solid;
-    border-color: rgb(125, 138, 8);
+html, body {
+    margin: 0;
+    padding: 0;
+}
+.hyperlink-as-button {
+    
+    border: 3px , solid, rgb(15, 15, 12);
     padding: 5px;
     margin: 20px;
     background-color: rgb(127, 255, 0);
     font-size: 30px;
     display: inline-block;
-    padding-left: auto;
-    color: rgb(172, 2, 157);
+    color: rgb(8, 8, 68);
 
 }
-.links:hover{
+.hyperlink-as-button{
     border-color: rgb(26, 29, 219);
     color: rgb(26, 29, 219);
     display: inline-block;
+    transition: all ;
+    transition-property: all;
+    transition-duration:0.4s;
+    transition-timing-function:ease-in-out;
 }
-.links:focus{
-    color: red;
-    border-color: red;
-}
-.hyperlink_table{
+.hyperlink-in-table{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
     text-decoration:none;
     display: inline-block;
@@ -30,11 +32,14 @@
     transition-timing-function:ease-in-out;
 
 }
-.hyperlink_table:hover{
-    text-decoration:underline;
+
+.hyperlink-as-button:hover, 
+.hyperlink-in-table:hover {
+    text-decoration: underline;
     color: brown;
     transform: scale(1.3);
 }
+
 body{
     background-color:rgb(219, 226, 191);
     font-size: larger;
@@ -51,9 +56,20 @@ p, ul, dl, ol{
 table{
     background-color:rgb(223, 232, 244);
     border-radius: 10px;
+    position:relative;
+    left: 35%;
 }
-#centerContainer{
-    position: absolute;
+#index_html_link_container{
+    position: relative;
     top: 30%;
     left: 35%;
 }
+
+/* 
+phones have arround 
+width: 950px;
+height: 1900px;
+
+
+thats exact for my phone when i run that on chrome
+*/
