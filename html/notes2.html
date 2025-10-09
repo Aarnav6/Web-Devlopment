@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Notes 2</title>
     <link rel="stylesheet" href="/css/style.css">
+    <style>
+        li{
+            margin: 12px;
+        }
+    </style>
 </head>
 <body>
 
@@ -24,12 +29,18 @@
                 <li>element selector: directly typing element name like body{}</li>
                 <li>class selector( . ): we can use an . symbol to call with class name like .highlight{}</li>
                 <li>id selector ( # ): we can use an # symbol to call with the id name like #importan_note1</li>
-                <li>universal selector ( * ): we can use an * symbol to make changes universal and it will affect every single element in the file which is to that css</li>
-                <li>
-                    Group Selector : we can use Group collection in css we can use , to seprate selections and they can have same type of class
+                <li>universal selector ( * ): we can use an * symbol to make changes universal and
+                    <br>it will affect every single element in the file which is to that css</li>
+                <li>Group Selector( , ) : we can use Group collection in css we can use, 
+                    <br>to seprate selections and they can have same type of class
                     <br>example: selecting by id #first, #second{} or by class .class1, .class2{}</li>
-                <li>
-                    Selector ( &gt; ): it can be used to nest the css elements
+                <li>Descendant Selector ( ): The descendant selector is created by placing a 
+                    <br>space between two selectors (Parent Child). This space acts as a combinator, 
+                    <br>instructing the browser to select a Child element only when it is located inside
+                    <br>a Parent element.Think of the space as the instruction "look inside.
+                </li>
+                <li>Child Combinator ( &gt; ) [NOTE IT's NOT AN SELECTOR, ITS AN COMBINATOR]: 
+                    <br>it can be used to nest the css elements
                     <br>&gt; : this operator in this context is known as child combinator
                     <br>example 1: #first &gt;.class1 &gt;p{}
                     <br>example 2: In Mordern Css This is Valid:
@@ -48,7 +59,6 @@
                 </li>
             </ol>
         </li>
-
 
         <!-- third point in notes -->
         <li>
