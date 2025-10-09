@@ -2,42 +2,34 @@ html, body {
     margin: 0;
     padding: 0;
 }
-.hyperlink-as-button {
-    
+.hyperlink-as-button{  
     border: 3px , solid, rgb(15, 15, 12);
     padding: 5px;
-    margin: 20px;
-    background-color: rgb(127, 255, 0);
+    margin: 10px;
     font-size: 30px;
-    display: inline-block;
-    color: rgb(8, 8, 68);
-
-}
-.hyperlink-as-button{
-    border-color: rgb(26, 29, 219);
+    text-decoration:none;
+    background-color: rgb(188, 236, 149);
+    border-color: rgb(2, 3, 71);
     color: rgb(26, 29, 219);
-    display: inline-block;
-    transition: all ;
-    transition-property: all;
-    transition-duration:0.4s;
-    transition-timing-function:ease-in-out;
 }
 .hyperlink-in-table{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
     text-decoration:none;
-    display: inline-block;
     color: rgb(8, 8, 68);
-    transition-property: all;
-    transition-duration:0.4s;
-    transition-timing-function:ease-in-out;
-
 }
+
+.hyperlink-in-table, 
+.hyperlink-as-button {
+    display: inline-block;
+    transition-property: all;
+    transition-duration:0.2s;
+    transition-timing-function:ease-in-out;
+} 
 
 .hyperlink-as-button:hover, 
 .hyperlink-in-table:hover {
-    text-decoration: underline;
     color: brown;
-    transform: scale(1.3);
+    transform: scale(1.2);
 }
 
 body{
