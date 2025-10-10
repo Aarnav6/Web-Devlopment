@@ -3,12 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Javascript</title>
     <link rel="stylesheet" href="/css/style.css">
-    <title>Notes 3</title>
+    <script src="/js/Variables%20and%20DataTypes.js" defer></script>
+    <script src="/js/Operators%20and%20Conditional%20Statements.js" defer></script>
+    <script src="/js/loop%20and%20Strings.js" defer></script>
 </head>
 <body>
+    <h2>String Formatting Comparison</h2>
+    <table border="4" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Python</th>
+                <th>JavaScript</th>
+                <th>Java</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Modern Concept</td>
+                <td>f-string (Formatted String Literal)</td>
+                <td>Template Literal</td>
+                <td>String Template (Java 21+)</td>
+            </tr>
+            <tr>
+                <td>Modern Syntax</td>
+                <td><code>f"..."</code></td>
+                <td><code>`...`</code></td>
+                <td><code>STR."..."</code></td>
+            </tr>
+            <tr>
+                <td>Placeholder</td>
+                <td><code>{a}</code></td>
+                <td><code>${a}</code></td>
+                <td><code>\{a}</code></td>
+            </tr>
+            <tr>
+                <td>Modern Example</td>
+                <td><code>f"value of a = {a}"</code></td>
+                <td><code>`value of a = ${a}`</code></td>
+                <td><code>STR."value of a = \{a}"</code></td>
+            </tr>
+            <tr>
+                <td>Traditional Method</td>
+                <td><code>"...".format()</code></td>
+                <td>Concatenation (<code>+</code>)</td>
+                <td><code>String.format()</code></td>
+            </tr>
+            <tr>
+                <td>Traditional Example</td>
+                <td><code>"value of a = {}".format(a)</code></td>
+                <td><code>"value of a = " + a</code></td>
+                <td><code>String.format("value of a = %s", a)</code></td>
+            </tr>
+        </tbody>
+    </table>
 
-    <hr>
-    <a class="hyperlink-as-button" href="../index.html"> Back To Home page</a>
-    </body>
+    <main>
+        <h1>JavaScript Arrays, Sets, Freezing, and <code>.length</code> – Notes</h1>
+
+        <!-- Section 1: Arrays -->
+        <section>
+            <h2>1. Arrays in JavaScript</h2>
+            <p>Arrays are ordered collections of elements and can store different types of data (numbers, strings, objects, etc.). Similar to Python lists.</p>
+            <pre><code>// Example
+const arr = [1, "hello", true, { name: "Aarnav" }];
+</code></pre>
+        </section>
+
+        <!-- Section 2: .length -->
+        <section>
+            <h2>2. <code>.length</code> in JavaScript</h2>
+            <p>The <code>.length</code> property gives the number of elements in an array or characters in a string.</p>
+            <pre><code>
+const arr = [1, 2, 3];
+console.log(arr.length); // 3
+
+const str = "hello";
+console.log(str.length); // 5
+            </code></pre>
+            <p><strong>Note:</strong> <code>.length</code> is a property, not a function.</p>
+            <pre><code>
+arr.length   // ✅ correct
+arr.length() // ❌ incorrect
+            </code></pre>
+            <p><strong>Special use:</strong> You can modify <code>.length</code> to shrink or clear an array.</p>
+            <pre><code>
+const arr = [1, 2, 3, 4, 5];
+arr.length = 3;   // Shrinks array
+console.log(arr); // [1, 2, 3]
+
+arr.length = 0;   // Clears array
+console.log(arr); // []
+            </code></pre>
+        </section>
+
+        <!-- Section 3: const -->
+        <section>
+            <h2>3. Mutability and <code>const</code></h2>
+            <p>Declaring an array with <code>const</code> prevents reassigning the variable, but contents can still change.</p>
+            <pre><code>
+const arr = [1,2,3];
+arr[0] = 99;      // ✅ works
+arr = [4,5,6];    // ❌ error
+            </code></pre>
+        </section>
+
+        <!-- Section 4: Object.freeze() -->
+        <section>
+            <h2>4. Freezing Arrays: <code>Object.freeze()</code></h2>
+            <p>Freezes an array, preventing modifications. Freezing is shallow.</p>
+            <pre><code>
+const arr = [1,2,3];
+Object.freeze(arr);
+
+arr[0] = 99; // ❌ ignored
+arr.push(4); // ❌ TypeError
+console.log(arr); // [1,2,3]
+            </code></pre>
+            <ul>
+                <li>Works in-place, returns same reference</li>
+                <li>All references are frozen</li>
+                <li>Use deep freeze for nested objects</li>
+            </ul>
+        </section>
+
+        <!-- Section 5: Tuples -->
+        <section>
+            <h2>5. Tuples in JavaScript</h2>
+            <p>JavaScript has no native tuple type. Use <code>Object.freeze(array)</code> to mimic.</p>
+            <pre><code>
+const tuple = Object.freeze([10,20]);
+tuple[0] = 99; // ❌ Won't change
+            </code></pre>
+        </section>
+
+        <!-- Section 6: Sets -->
+        <section>
+            <h2>6. Sets in JavaScript</h2>
+            <p>Equivalent to Python sets. Store unique values.</p>
+            <pre><code>
+const mySet = new Set([1,2,3,3]);
+console.log(mySet); // Set(3) {1,2,3}
+mySet.add(4);
+console.log(mySet.has(2)); // true
+            </code></pre>
+        </section>
+
+        <!-- Section 7: Loops -->
+        <section>
+            <h2>7. Loops and Arrays</h2>
+            <p><strong>for...of</strong> → iterates over values.<br>
+            <strong>for...in</strong> → iterates over keys/properties.</p>
+            <pre><code>
+const arr = [10, 20, 30];
+
+for (let val of arr) console.log(val); // 10,20,30
+for (let key in arr) console.log(key); // 0,1,2
+            </code></pre>
+        </section>
+
+        <!-- Section 8: Summary Table -->
+        <section>
+            <h2>8. Summary Table</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Python</th>
+                        <th>JavaScript</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>List / Array</td>
+                        <td><code>[1, "a"]</code></td>
+                        <td><code>[1, "a"]</code></td>
+                    </tr>
+                    <tr>
+                        <td>Tuple</td>
+                        <td><code>(1, 2)</code></td>
+                        <td><code>Object.freeze([1,2])</code></td>
+                    </tr>
+                    <tr>
+                        <td>Set</td>
+                        <td><code>{1, 2, 2}</code></td>
+                        <td><code>new Set([1,2,2])</code></td>
+                    </tr>
+                    <tr>
+                        <td>Length</td>
+                        <td><code>len(arr)</code></td>
+                        <td><code>arr.length</code></td>
+                    </tr>
+                    <tr>
+                        <td>Constant reference</td>
+                        <td>N/A</td>
+                        <td><code>const arr</code></td>
+                    </tr>
+                    <tr>
+                        <td>Immutable array</td>
+                        <td>N/A</td>
+                        <td><code>Object.freeze(arr)</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+        <a class="hyperlink-as-button" href="/html/guess the number.html">Play Guess The Number (made by js)</a><br><br>
+        <a class="hyperlink-as-button" href="../index.html"> Back To Home page</a><br><br>
+    </main>
+</body>
 </html>
