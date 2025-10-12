@@ -32,7 +32,24 @@ h1 {
 a{
     text-decoration: none;
 }
-
+#outer-box2, #outer-box3, #outer-box4 {
+    border-radius:50%;
+    text-align: center;
+    display: inline-block;
+    height: 140px;
+    width: 140px;
+    padding-top: 80px;
+    color: aquamarine;
+}
+#outer-box2{
+    background-color: rgba(0,0,255,1);
+}
+#outer-box3{
+    background-color: rgba(0,0,255,0.75);
+}
+#outer-box4{
+    background-color: rgba(0,0,255,0.5);
+}
 /*
 font weight can also vary from 100 to 900
 and we can also select the bold bolder and lighter
@@ -49,4 +66,66 @@ font-weight: 900;
 /*
 text-transform can be used to manipulate the text like we can put the 
 captalize to captalize the first letter of the each word in text
+*/
+
+/*
+display property
+value : inline / block / inline - block / none
+
+1.inline it takes only required spaces
+    Horizontal margin and padding (left and right): 
+        These are respected and will push other elements away horizontally.
+    Vertical margin and padding (top and bottom): 
+        These are not respected. Top and bottom margins are ignored completely. 
+        Top and bottom padding will be applied visually, 
+        but they won't push other lines of text or elements up or down; 
+        they will just overlap.
+    width and height: 
+        These properties are also ignored. 
+    examples of inline => input, anchor, button
+
+
+2.block takes full width
+    examples of block => div, heading
+
+3.An inline-block element is a hybrid. 
+    It flows on the same line like an inline element, 
+    but you can control its box model properties (like width, height, margin, padding) 
+    just like a block element.
+
+    All margin and padding: 
+        Respected on all four sides (top, right, bottom, left). 
+        It will push other elements away both horizontally and vertically.
+
+    width and height: These properties are respected.
+
+4. What display: none; Does
+    Removes from Document Flow: The element is completely removed from the page's layout.
+    Takes Up No Space: Unlike a hidden element, 
+    it occupies zero space. Other elements will shift to fill the void it leaves behind.
+    Inaccessible: The element (and all of its children) cannot be seen, 
+    clicked on, or interacted with by the user. It's also hidden from screen readers, 
+    which is an important accessibility consideration.
+    Invisible: The element is not rendered visually.
+
+    
+    Feature	                display: none;	                        visibility: hidden;
+    
+    Effect on Layout	    Removes the element.                    Hides the element. It still occupies its original space.
+                            Space is reclaimed by other 
+                            elements.	
+
+    
+    Space Occupied	        None	                                The element's original width and height
+    
+
+    Interaction	            Not interactive	                        Not interactive
+    
+
+    Accessibility	        Hidden from screen readers	            Hidden from screen readers (usually)
+*/
+
+/*
+Alpha Channel
+rgpba : where a  is for "aplha chanel" it decides the opacitiy
 */
