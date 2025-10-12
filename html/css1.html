@@ -4,7 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learning CSS -- 1</title>
-    <link rel="stylesheet" href="/css/css1.css"></style>
+    <link rel="stylesheet" href="/css/css1.css">
+    <style>
+        .hyperlink-as-button{  
+            border: 3px , solid, rgb(15, 15, 12);
+            padding: 5px;
+            margin: 10px;
+            font-size: 30px;
+            text-decoration:none;
+            background-color: rgb(188, 236, 149);
+            border-color: rgb(2, 3, 71);
+            color: rgb(26, 29, 219);
+            display: inline-block;
+            transition-property: all;
+            transition-duration:0.2s;
+            transition-timing-function:ease-in-out;
+        }
+        .hyperlink-as-button:hover {
+            color: brown;
+            transform: scale(1.2);
+        }
+    </style>
 </head>
     <body>
         <div class="outer-box" id="outer-box1">
@@ -58,7 +78,9 @@
                 </p>
             </div>
         </div>
-            <button>This is an Button</button><br>       
-            <a href=""> this is an achor tag</a>
+        <button>This is an Button</button><br>       
+        <a href=""> this is an achor tag</a>
+        <hr>
+        <a class="hyperlink-as-button" href="../index.html"> Back To Home page</a>
     </body>
 </html>
