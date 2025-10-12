@@ -48,3 +48,53 @@ let student = {
 for(let key in student) {
     console.log(`Key=${key} value=${student[key]}`);
 }
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------------
+//Strings in js
+//NOTE STRINGS IN JAVASCRIPT ARE IMMUTABLE
+
+
+let paragraph = `                this is an special type of string in java script called template literal
+                we can use it for the multi line string and also we can use it for the formatted string
+                this formated string phenomena in which we can embed the placeholders in string is called
+                string interpolation we can type an dollar sign and typing the curly braces we can type an 
+                variable to print its value or we can use an expresstion to inside the curly braces like 
+                1+2+3 which will print 6 there                                                           `;
+console.log(paragraph);
+
+// string methods
+
+console.log(paragraph.toUpperCase());
+console.log(paragraph.toLowerCase());
+
+
+/*
+trim methods remove the leading and trailing spaces in an string, 
+hence spaces in starting and ending are removed does not affect spaces inside the stirng
+*/
+console.log(paragraph.trim());
+
+
+/*
+in string.slice starting index is inclusive, ending index is exclusive if only one argumnent is passed it will be considred as
+start and it will slice from start (inclusive) to the end of string
+*/
+console.log(paragraph.slice(0, 100)); 
+
+
+console.log(paragraph.concat("this is appended using the concat() method in string"));
+console.log(paragraph.replace("s","--s letter is replaced with ABCDEFGHI"));
+console.log(paragraph.replaceAll("s","--s letter is replaced with ABCDEFGHI"));
+console.log(`using the paragraph.charAt(18) = ${paragraph.charAt(18)}`);
+
+s = "I LOVE JS";
+s[0] = "S"; // this will not change the  I into S since string in javascript are Immutable
+console.log(s);
+s = s.replace("I","S");
+console.log(s);
+
+
+// it was an quesiton in the lecture :-
+// let fullName = prompt("enter the your name");
+// let tempEmailId = "@".concat(fullName).concat(fullName.length);
+// console.log(tempEmailId);

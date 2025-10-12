@@ -6,12 +6,31 @@
     <link rel="stylesheet" href="/css/style.css">
     <title>Form and user Input</title>
     <style>
+        fieldset {
+            text-align: center;
+        }
+        .form1_buttons {
+            width: 100px;
+            height: 30px;
+            margin: 15px;
+        }
+        p{
+            padding: 2px;
+        }
+        h3{
+            margin-top: 10px;
+            margin-bottom : 10px;
+        }
+        #important_notes li {
+            margin-top:8px;
+        }
         #input_types{
             border: 2px solid rgb(30, 32, 33);
             background-color: aqua;
             margin: 2px;
             padding: 2px;
             padding-left: 50px;
+            text-align: left;
         }
         #important_notes{
             border: 4px solid red;
@@ -19,6 +38,7 @@
             margin: 2px;
             padding: 2px;
             padding-left: 50px;
+            text-align: left;
         }
         #form1{
             margin: 2px;
@@ -123,7 +143,7 @@
 
             <button class="form1_buttons" type="submit">sign up</button>
             <button class="form1_buttons" type="reset">reset data</button>
-            <button class="form1_buttons" type="button">default generic button</button>
+            <button class="form1_buttons" type="button">normal button</button>
             
             <label for="volume">Volume:</label>
             <input type="range" id="volume" name="volume" min="0" max="100" value="50">
@@ -135,37 +155,37 @@
             <ol>
                 <li>
                     <dl>
-                        <dt>text</dt>
+                        <dt><h3>text</h3></dt>
                         <dd>excepts both numbers and textual data</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
-                        <dt>password</dt>
+                        <dt><h3>password</h3></dt>
                         <dd>excepts both it is same as text but input is hidden and shown in form of dots</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
-                        <dt>email</dt>
+                        <dt><h3>email</h3></dt>
                         <dd>will not accept wrong input other than email, takes input in email format</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
-                        <dt>numbers</dt>
+                        <dt><h3>numbers</h3></dt>
                         <dd>only takes number, we can set the input range, also in mobile it opens only numpad</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
-                        <dt>date</dt>
+                        <dt><h3>date</h3></dt>
                         <dd>can be used to take date input gives calendar option to input date</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
-                        <dt>color</dt>
+                        <dt><h3>color</h3></dt>
                         <dd>it can be used to select an color pallete </dd>
                         <dd>also we can use an attribute value="#ff0000" it can be anything</dd>
                         <dd>this sets the default value</dd>
@@ -173,14 +193,14 @@
                 </li>
                 <li>
                     <dl>
-                        <dt>file</dt>
+                        <dt><h3>file</h3></dt>
                         <dd>u can select file and upload it for that file input can be done</dd>
                         <dd>we can use multiple as well to take multiple input there</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
-                        <dt>radio</dt>
+                        <dt><h3>radio</h3></dt>
                         <dd>can be used to select mcq type values like gender so that user can select one option among given ones</dd>
                         <dd>can be used for something like genders</dd>
                         <dd><strong>Note:</strong><span id="important">radio's of same type like gender must share same name="" attribute in input </span></dd>
@@ -188,15 +208,15 @@
                 </li>
                 <li>
                     <dl>
-                        <dt>checkbox</dt>
+                        <dt><h3>checkbox</h3></dt>
                         <dd>simillar to radio but allows multiple checked boxes</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
-                        <dt>range</dt>
+                        <dt><h3>range</h3></dt>
                         <dd>an slider can be used by range and it has min, max and value (the default value)</dd>
-                        <dd>as an example: volume slider or brightness slider can be used for the type : range</dd>
+                        <dd style="margin-bottom: 15px;">as an example: volume slider or brightness slider can be used for the type : range</dd>
                     </dl>
                 </li>
             </ol>

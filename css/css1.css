@@ -1,0 +1,52 @@
+* {
+    font-family: cursive;
+    text-align: center;
+}
+body{
+    background-color: #97DFFC;
+}
+h1 {
+    text-decoration:rgb(134, 8, 8) underline dashed;
+    text-transform: capitalize;
+}
+.outer-box {
+    background-color: #9C89B8;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 8px;
+}
+.inner-box {
+    background-color: #EDE7B1;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+.inner-box h1 {
+    font-size:25px; 
+}
+.inner-box p {
+    font-weight: 500;
+    font-size: 20px ;
+    line-height: 25px;
+}
+a{
+    text-decoration: none;
+}
+
+/*
+font weight can also vary from 100 to 900
+and we can also select the bold bolder and lighter
+font-weight: 100;
+font-weight: 200;
+font-weight: 300;
+font-weight: 400; normal
+font-weight: 500;
+font-weight: 600;
+font-weight: 700; bold
+font-weight: 800;
+font-weight: 900;
+*/
+/*
+text-transform can be used to manipulate the text like we can put the 
+captalize to captalize the first letter of the each word in text
+*/

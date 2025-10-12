@@ -1,4 +1,4 @@
-html, body {
+* {
     margin: 0;
     padding: 0;
 }
@@ -44,6 +44,7 @@ body{
 p, ul, dl, ol{
     background-color:rgb(255, 255, 255);
     border-radius: 10px;
+    display: inline;
 }
 table{
     background-color:rgb(223, 232, 244);
