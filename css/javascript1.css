@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+p,pre{
+    background-color: aqua;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+}
+.imp{
+    background-color: red;
+    color: beige;
+    margin: 2px;
+    margin-bottom: 16px;
+    display: inline-block;
+}
+.notes{
+    border-color: black;
+    border-style: solid;
+    padding: 5px;
+    background-color: blueviolet;
+    color:crimson;
+}
+body{
+    background-color:rgb(219, 226, 191);
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight:bold;
+    padding: 10px;
+    word-spacing: 4px;
+    line-height: 1.2;
+}
