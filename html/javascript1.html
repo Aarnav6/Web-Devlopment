@@ -1,55 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning JavaScript -- 1</title>
-    <script src="/js/Variables%20and%20DataTypes.js" defer></script>
-    <script src="/js/Operators%20and%20Conditional Statements.js" defer></script>
-    <script src="/js/Loop%20and%20Strings.js" defer></script>
-    <script src="/js/Arrays.js" defer></script>
-    <script src="/js/Functions%20and%20Methods.js" defer></script>
-    <link rel="stylesheet" href="/css/javascript1.css">
-    <style>
-        .hyperlink-as-button{  
-            border: 3px , solid, rgb(15, 15, 12);
-            padding: 5px;
-            margin: 10px;
-            font-size: 30px;
-            text-decoration:none;
-            background-color: rgb(188, 236, 149);
-            border-color: rgb(2, 3, 71);
-            color: rgb(26, 29, 219);
-            display: inline-block;
-            transition-property: all;
-            transition-duration:0.2s;
-            transition-timing-function:ease-in-out;
-        }
-        .hyperlink-as-button:hover {
-            color: brown;
-            transform: scale(1.2);
-        }
-    </style>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Learning JavaScript -- 1</title>
+        <script src="/js/Variables%20and%20DataTypes.js" defer></script>
+        <script src="/js/Operators%20and%20Conditional Statements.js" defer></script>
+        <script src="/js/Loop%20and%20Strings.js" defer></script>
+        <script src="/js/Arrays.js" defer></script>
+        <script src="/js/Functions%20and%20Methods.js" defer></script>
+        <link rel="stylesheet" href="/css/javascript1.css">
+        <style>
+            .hyperlink-as-button{  
+                border: 3px solid rgb(15, 15, 12);
+                padding: 5px;
+                margin: 10px;
+                font-size: 30px;
+                text-decoration:none;
+                background-color: rgb(188, 236, 149);
+                border-color: rgb(2, 3, 71);
+                color: rgb(26, 29, 219);
+                display: inline-block;
+                transition-property: all;
+                transition-duration:0.2s;
+                transition-timing-function:ease-in-out;
+            }
+            .hyperlink-as-button:hover {
+                color: brown;
+                transform: scale(1.2);
+            }
+        </style>
+    </head>
     <body>
         <p class="imp">inspect the page with an right click then see the console</p>
         <hr>
         <div class="notes">
             <p>remember if you are passing an function as an argument (callback) and its
-            already decalred above as in given example above while passing it as an argument
+            already declared above as in given example above while passing it as an argument
             you must not use () the braces.</p>
 
             <pre>
                 <code>
-//to calulate square of nums
+//to calculate square of nums
 let nums1 = [0,1,2,3,4,5,6,7,8,9];
 let calculateSquare = (num) => {
     console.log(`square of ${num} = ${num**2}`); // same as val * val
 }
 nums1.forEach (calculateSquare);
-</code>
+                </code>
             </pre>
         </div>
+        <div class="notes">
+            <h1>Truthy vs. Falsy in JavaScript</h1>
+            <p>
+                This is a fundamental concept in JavaScript. In JavaScript, every value has an inherent boolean value,
+                meaning it can be evaluated as either "truthy" or "falsy" in a boolean context.
+            </p>
+            <p>
+                <strong>Key Application:</strong> This logic is exactly how JavaScript decides what to do
+                in an <code>if</code> statement and which elements to keep when using the
+                <code>.filter()</code> array method.
+            </p>
+        </div>
+        <div class="notes">
+            <h2>Falsy Values 👎</h2>
+            <p>
+                A <strong>falsy</strong> value is a value that is considered <code>false</code> when
+                encountered in a boolean context. There are only a few falsy values in JavaScript.
+                Both <code>if</code> blocks and <code>.filter()</code> will treat these as <code>false</code>.
+            </p>
+            <ul>
+                <li><code>false</code></li>
+                <li><code>0</code> (the number zero)</li>
+                <li><code>-0</code> (negative zero)</li>
+                <li><code>""</code> (an empty string)</li>
+                <li><code>null</code></li>
+                <li><code>undefined</code></li>
+                <li><code>NaN</code> (Not a Number)</li>
+            </ul>
+        </div>
+        <div class="notes">
+            <h2>Truthy Values 👍</h2>
+            <p>
+                A <strong>truthy</strong> value is a value that is considered <code>true</code> when
+                encountered in a boolean context.
+            </p>
+            <p>
+                <strong>Everything else is truthy.</strong>
+            </p>
+            <p>
+                This includes (but is not limited to):
+            </p>
+            <ul>
+                <li>Any non-empty string (e.g., <code>"hello"</code>, <code>"0"</code>, <code>"false"</code>)</li>
+                <li>Any non-zero number (e.g., <code>1</code>, <code>-5</code>, <code>3.14</code>, <code>-0.5</code>)</li>
+                <li>Arrays (even empty ones: <code>[]</code>)</li>
+                <li>Objects (even empty ones: <code>{}</code>)</li>
+            </ul>
+        </div>
+        <table border="9">
+            <thead>
+                <tr>
+                    <th>Method</th>
+                    <th>Parameters</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>map()</td>
+                    <td><code>(element, index, array)</code></td>
+                    <td>Returns a new array by transforming elements.</td>
+                </tr>
+
+                <tr>
+                    <td>filter()</td>
+                    <td><code>(element, index, array)</code></td>
+                    <td>Returns elements that satisfy a condition.</td>
+                </tr>
+
+                <tr>
+                    <td>forEach()</td>
+                    <td><code>(element, index, array)</code></td>
+                    <td>Executes a function on each element (no return array).</td>
+                </tr>
+
+                <tr>
+                    <td>reduce()</td>
+                    <td><code>(accumulator, element, index, array)</code></td>
+                    <td>Reduces all elements to a single value.</td>
+                </tr>
+
+                <tr>
+                    <td>some()</td>
+                    <td><code>(element, index, array)</code></td>
+                    <td>Checks if any element passes a test (returns boolean).</td>
+                </tr>
+
+                <tr>
+                    <td>every()</td>
+                    <td><code>(element, index, array)</code></td>
+                    <td>Checks if all elements pass a test (returns boolean).</td>
+                </tr>
+
+                <tr>
+                    <td>find()</td>
+                    <td><code>(element, index, array)</code></td>
+                    <td>Returns the first element that passes a test (or <code class="param">undefined</code>).</td>
+                </tr>
+
+                <tr>
+                    <td>findIndex()</td>
+                    <td><code>(element, index, array)</code></td>
+                    <td>Returns the index of the first element that passes a test (or <code class="param">-1</code>).</td>
+                </tr>
+            </tbody>
+        </table>
         <hr>
         <a class="hyperlink-as-button" href="../index.html"> Back To Home page</a>
     </body>

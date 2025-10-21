@@ -7,12 +7,13 @@ p,pre{
     padding: 10px;
     margin: 10px;
     border-radius: 20px;
+    color: black;
 }
 .imp{
     background-color: red;
     color: beige;
-    margin: 2px;
-    margin-bottom: 16px;
+    padding: 10px;
+    margin: 10px;
     display: inline-block;
 }
 .notes{
@@ -20,7 +21,10 @@ p,pre{
     border-style: solid;
     padding: 5px;
     background-color: blueviolet;
-    color:crimson;
+    color:white;
+}
+.notes ul{
+    padding-left: 35px;
 }
 body{
     background-color:rgb(219, 226, 191);
@@ -30,4 +34,14 @@ body{
     padding: 10px;
     word-spacing: 4px;
     line-height: 1.2;
+}
+div{
+    margin: 10px;
+    padding: 10px;
+}
+table{
+    background-color: azure;
+}
+table th, table td {
+    padding: 10px;
 }

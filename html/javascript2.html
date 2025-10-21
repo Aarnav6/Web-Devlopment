@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Learning JavaScript -- 2 (DOM model)</title>
+        <link rel="stylesheet" href="/css/javascript2.css">
+        <script src="/js/document-object-model.js" defer></script>
+        <style>
+            .hyperlink-as-button{  
+                border: 3px solid rgb(15, 15, 12);
+                padding: 5px;
+                margin: 10px;
+                font-size: 30px;
+                text-decoration:none;
+                background-color: rgb(188, 236, 149);
+                border-color: rgb(2, 3, 71);
+                color: rgb(26, 29, 219);
+                display: inline-block;
+                transition-property: all;
+                transition-duration:0.2s;
+                transition-timing-function:ease-in-out;
+            }
+            .hyperlink-as-button:hover {
+                color: brown;
+                transform: scale(1.2);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper-content">
+            <div class="inner-div">
+                <h2>JavaScript Notes: Primitive <code>string</code> vs <code>String</code> Object</h2>
+                <p>There are two types of "string" in JavaScript, which can be confusing. Here's the breakdown.</p>
+                <ul>
+                    <li>
+                        <strong>1. Primitive <code>string</code> (lowercase)</strong>
+                        <ul>
+                            <li>This is the normal, everyday string you create with literals.</li>
+                            <li>Example: <code>let myName = "Aarnav";</code></li>
+                            <li>It's a primitive data type, just like <code>number</code> and <code>boolean</code>.</li>
+                            <li>Checking its type: <code>typeof myName</code> will return <code>"string"</code>.</li>
+                            <li>This is the lightweight, fast, and recommended version to use.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>2. The <code>String</code> Object (Uppercase)</strong>
+                        <ul>
+                            <li>This is a full-blown object wrapper, created using the <code>new</code> keyword.</li>
+                            <li>Example: <code>let myNameObj = new String("Aarnav");</code></li>
+                            <li>Checking its type: <code>typeof myNameObj</code> will return <code>"object"</code>.</li>
+                            <li><strong>You should almost never use this.</strong> It's slower and leads to confusing behavior (e.g., <code>"Aarnav" === new String("Aarnav")</code> is <strong>false</strong>).</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>3. The "Magic": Autoboxing</strong>
+                        <ul>
+                            <li><strong>Question:</strong> If <code>myName</code> is just a primitive, how can we call methods on it like <code>myName.toUpperCase()</code>?</li>
+                            <li><strong>Answer: Autoboxing</strong>.</li>
+                            <li>When you try to use a method on a primitive string, JavaScript automatically and temporarily "boxes" it (wraps it) in a <code>String</code> object.</li>
+                            <li>It calls the method (e.g., <code>.toUpperCase()</code>) on that temporary object.</li>
+                            <li>The method returns the result (the new primitive string "AARNAV").</li>
+                            <li>The temporary object is immediately discarded.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>4. Java Analogy</strong>
+                        <ul>
+                            <li>This is almost identical to <code>int</code> vs. <code>Integer</code> in Java.</li>
+                            <li>JavaScript <code>string</code> (primitive) is like Java's <code>int</code> (primitive).</li>
+                            <li>JavaScript <code>String</code> (object) is like Java's <code>Integer</code> (wrapper class).</li>
+                            <li>The "autoboxing" concept is the same in both languages.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="inner-div">
+                <p>console.log and console.dir are both used for debugging in the browser's console, but they display information, especially objects, in different ways.</p>
+                <p>The main difference is how they handle DOM elements and JavaScript objects.</p>
+                <p>console.log( ) is for general-purpose logging.</p>
+                <ul>
+                    <li>For DOM elements: It prints an interactive HTML-like tree. This is great for seeing the element's structure in the DOM.</li>
+                    <li>For JavaScript objects: It usually prints the object's string representation, though most modern browsers now show an expandable object summary.</li>
+                </ul>
+                <p>console.dir( ) is for displaying an interactive, property-list view of an object.</p>
+                <ul>
+                    <li>For DOM elements: It prints the element as a full-fledged JavaScript object, showing all its properties (like id, children, style, onclick, etc.). This is extremely useful for inspecting the properties of a DOM node.</li>
+                    <li>For JavaScript objects: It displays an expandable, JSON-like tree of all the object's properties, which is its primary purpose.</li>
+                </ul>
+                <h2>Comparison at a Glance</h2>
+                <ul>
+                    <li>
+                        <strong>console.log()</strong>
+                        <ul>
+                            <li><strong>Best For:</strong> General output, viewing DOM structure.</li>
+                            <li><strong>Output for a DOM Element:</strong> &lt;body class="..."&gt; (HTML-like tree)</li>
+                            <li><strong>Output for a JS Object:</strong> {a: 1} (String or object summary)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>console.dir()</strong>
+                        <ul>
+                            <li><strong>Best For:</strong> Inspecting an object's properties.</li>
+                            <li><strong>Output for a DOM Element:</strong> body (Expandable list of all JS properties)</li>
+                            <li><strong>Output for a JS Object:</strong> {a: 1} (Expandable list of properties)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <a class="hyperlink-as-button" href="../index.html"> Back To Home page</a>
+        </div>
+    </body>
+</html>

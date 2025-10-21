@@ -1,3 +1,7 @@
+// both are valid ways to create an array
+// let arr4 = Array(1,2,3,4,5,6,7); this is using constructor, cant be used for single value since it creates a new, empty array with its length property set to that number.
+// let arr4 = [1,2,3,4,5,6,7]; this is using literal
+
 let marks = [20,30,40,50];
 let random = [2, "a", true, 24.76, [4,5,6,"this is inner array"]];
 let new_student = {
