@@ -89,4 +89,4 @@ splice() :
     item1, item2, ... → Elements to add at the start index (optional)
 */
 
-
+//  we can use Array.from() to convert an HTMLCollection to the array to use forEach() and map() methods
