@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Clock</title>
+    <style>
+        #time-bar{
+            border: 2px solid black;
+            width: 200px;
+            height: 200px;
+            background-color:antiquewhite;
+        }
+        #time-box{
+            border: 2px solid black;
+            width: 75%;
+            height: 30%;
+            background-color:aquamarine;
+        }
+        body,div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h3>clock</h3>
+    <div id="time-bar">
+        <div id="time-box">
+            <h5 id="time">Default Time</h5>
+        </div>
+    </div>
+    <script>
+        time = document.getElementById("time")
+        setInterval(() => { 
+            date = new Date();
+            time.innerText = date.toLocaleString();
+        } ,1000)
+    </script>
+</body>
+</html>

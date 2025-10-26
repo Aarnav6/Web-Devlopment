@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hover Mode Example</title>
+        <style>
+            /* Basic styles */
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                margin-top: 40px;
+            }
+
+            button {
+                padding: 10px 20px;
+                margin-bottom: 30px;
+                cursor: pointer;
+            }
+
+            /* Div styling */
+            .outer {
+                width: 300px;
+                height: 200px;
+                margin: 0 auto;
+                background-color: lightgray;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                transition: all 0.3s ease;
+            }
+
+            .inner {
+                width: 150px;
+                height: 100px;
+                margin: 30px;
+                background-color: gray;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                transition: all 0.3s ease;
+            }
+
+            /* This hover effect works ONLY when hover-mode-on is active */
+            .hover-mode-on .outer:hover {
+                background-color: skyblue;
+            }
+
+            .hover-mode-on .outer:hover .inner {
+                transform: scale(1.1);
+                background-color: limegreen;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="toggleHoverMode">Toggle Hover Mode</button>
+        <div class="outer">
+            Outer Div
+            <div class="inner">Inner Div</div>
+        </div>
+    </body>
+    <script>
+        const button = document.getElementById("toggleHoverMode");
+        button.addEventListener("click", () => {
+            document.body.classList.toggle("hover-mode-on");
+
+            // Optional: update button text for clarity
+            if (document.body.classList.contains("hover-mode-on")) {
+                button.textContent = "Hover Mode: ON";
+                button.style.backgroundColor = "lightgreen";
+            } else {
+                button.textContent = "Hover Mode: OFF";
+                button.style.backgroundColor = "";
+            }
+        });
+    </script>
+</html>

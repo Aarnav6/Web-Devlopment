@@ -37,7 +37,7 @@ textContent : returns textual content even for hidden elements
                 LEARNT BY SELF DISCOVRED
 children : it gives children it returns HTMLCollection
 */
-
+//-------------------------------------------------------------------------------------------------------------------------------------------------------
 /*
 THIS IS WHERE I WASTED MY 3HRS FOR NOTHING BUT UNDERSTANDIN AN SIMPLE LOOP LOGIC 
 IT TOOK THREE HOURS JUST BECAUSE FOR SOME REASON IF U HAVE AN GRAMMARLY EXTENSION IT WOULDNT COUNT THAT FOR THE CHILD FROM JS BUT IF U JUST PRINT IT THERE IT WOULD SHOW LENGTH 
@@ -77,7 +77,7 @@ for (let ch1 of doc.children) {
 }
 
 */
-
+//-------------------------------------------------------------------------------------------------------------------------------------------------------
 /*
 Attributes
     .getAttribute( attr ) //to get the attribute value
@@ -96,3 +96,24 @@ Insert Elements         let el = document.createElement(“div“)
 Delete Element
     node.remove( ) //removes the node
 */
+//-------------------------------------------------------------------------------------------------------------------------------------------------------
+/*
+// function createHeading(headingId,headingText) {
+//     temp = document.createElement("h2");
+//     temp.innerText = headingText;
+//     temp.setAttribute("id",headingId);
+//     return temp;
+// }
+// function createDiv(divId, divInnerElement) {
+//     temp = document.createElement("div");
+//     temp.setAttribute("id",divId);
+//     temp.appendChild(divInnerElement);
+//     document.body.prepend(temp);
+//     return temp;
+// }
+// const customHeading = createHeading("i1","this is custom heading");
+// const customDiv = createDiv("i2",customHeading);
+// console.dir(customDiv);
+*/
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------------
