@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>tic tac toe</title>
+    <link rel="stylesheet" href="/css/style.css"> <!-- for styling back to home page button only this does not style anything else -->
+    <style>
+        div{
+            border: 2px solid black;
+            width: 400px;
+            height: 400px;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            margin: 20px;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 80vh;
+            background-color: bisque;
+        }
+        button {
+            background-color: aquamarine;
+            margin: 5px;
+            color: blue;
+        }
+        .heading {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class = "heading" id="playerChanceHeading"></h2>
+    <div id="container">
+        <button class="button" id="1"></button>
+        <button class="button" id="2"></button>
+        <button class="button" id="3"></button>
+        <button class="button" id="4"></button>
+        <button class="button" id="5"></button>
+        <button class="button" id="6"></button>
+        <button class="button" id="7"></button>
+        <button class="button" id="8"></button>
+        <button class="button" id="9"></button>
+    </div>
+    <a class="hyperlink-as-button" href="../index.html"> Back To Home page</a>
+
+    <script>
+        let body = document.getElementById("body")
+        let div = document.getElementById("container")
+        let winner = false;
+        let chance = "player 1"; // can be "player 1" or "player 2"
+
+
+        let showChance = () => {
+            temp = chance === "player 1" ? "X" : "O"
+            document.getElementById("playerChanceHeading").innerText = `${chance} Turn : `.concat(temp)
+        }
+        let changeChance = () => chance === "player 1" ? chance = "player 2" : chance = "player 1" 
+        let enterText = (el) => {
+            if(chance === "player 1") {
+                el.innerText = "X" // putting X
+                changeChance() //changing player turn
+                el.disabled = true; // disabled button
+            }else if(chance === "player 2") {
+                el.innerText = "O" // putting O
+                changeChance() //changing player turn
+                el.disabled = true; // disabled button
+            }
+        }
+
+        let checkWinning = () => {
+            winningCombos = [
+                [1,5,9], [3,5,7],                    // diagonal
+                [1,2,3], [4,5,6], [7,8,9],   // row
+                [1,4,7], [2,5,8], [3,6,9]   // column
+            ]
+
+            box = {} // object containg all X or O with respect to key's as value
+            for(let key=1 ; key <=9 ; key++) {
+                box[key] = document.getElementById(key)
+            }
+
+            winningCombos.forEach((combo) => {      // getting the winning combos in the combo as array
+                const[a,b,c] = combo                // unpacking combos into 3 values a, b, c
+                if(box[a].innerText === "" || box[b].innerText === "" || box[c].innerText === "") {
+                    //initial case when the web page loads inner text are empty 
+                } else if(box[a].innerText === box[b].innerText && box[b].innerText === box[c].innerText) {  // checking winning condition
+                    winner = true
+                    changeChance()
+                    alert(`Congratulations ${chance} wins!!`)
+                }
+            });
+        }
+        let play = (e) => {
+            let el = e.target
+            if(winner) {
+                //refresh the page
+            } else {
+                if(el.classList.contains("button")) {
+                    console.dir(el) // printing the target element if button
+                    enterText(el)  // printing X or O based on player chance
+                    showChance() // to update after the TextInput of X or O
+                    checkWinning()
+                }
+            }
+        }
+
+        showChance() //to show chances intialy 
+        div.addEventListener('click',play,false)
+
+    </script>
+</body>
+</html>

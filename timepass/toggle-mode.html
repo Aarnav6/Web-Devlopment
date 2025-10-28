@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Hover Mode Example</title>
-        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/style.css"> <!-- for styling back to home page button only this does not style anything else -->
         <style>
             /* Basic styles */
             body {
@@ -63,12 +63,11 @@
             <div class="inner">Inner Div</div>
         </div>
         <a class="hyperlink-as-button" href="../index.html"> Back To Home page</a>
-    </body>
-    <script>
-        const button = document.getElementById("toggleHoverMode");
-        button.addEventListener("click", () => {
-            document.body.classList.toggle("hover-mode-on");
-
+        <script>
+            const button = document.getElementById("toggleHoverMode");
+            button.addEventListener("click", () => {
+                document.body.classList.toggle("hover-mode-on");
+                
             // Optional: update button text for clarity
             if (document.body.classList.contains("hover-mode-on")) {
                 button.textContent = "Hover Mode: ON";
@@ -78,5 +77,6 @@
                 button.style.backgroundColor = "";
             }
         });
-    </script>
+        </script>
+    </body>
 </html>
