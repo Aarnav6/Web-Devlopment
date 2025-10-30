@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+         <link rel="stylesheet" href="/css/style.css"> <!-- for styling back to home page button only this does not style anything else -->
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100vw;
+                height: 70vh;
+                background-color: antiquewhite;
+            }
+            table{
+                display: block;
+
+                position: static;
+                border: 3px solid black ;
+                padding: 20px;
+                margin: 30px;
+                background-color: aliceblue;
+            }
+            th,td{
+                border: 3px solid black ;
+                padding: 30px;
+                margin: 30px;
+                background-color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <h2> welcome to key listener press any keyboard key and u can track it here in table</h2>
+        <table>
+            <thead>
+                <th>Key</th>
+                <th>Key Code</th>
+                <th>Code</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a class="hyperlink-as-button" href="../index.html"> Back To Home page</a>
+        <!-- script -->
+        <script>
+            let keyListen = (e) => {
+                const keyVal = document.querySelectorAll("body table tbody tr td")[0]
+                const keyCodeVal = document.querySelectorAll("body table tbody tr td")[1]
+                const codeVal = document.querySelectorAll("body table tbody tr td")[2]
+
+                if(e.key === " ") {
+                    keyVal.innerText = "SPACE"
+                } else {
+                    keyVal.innerText = e.key
+                }
+                keyCodeVal.innerText = e.keyCode
+                codeVal.innerText = e.code
+                
+            }
+            window.addEventListener('keydown', keyListen,false)
+        </script>
+    </body>
+</html>
