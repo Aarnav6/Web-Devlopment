@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>dynamic color page</title>
+    <link rel="stylesheet" href="/css/style.css"> <!-- for styling back to home page button only this does not style anything else -->
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 70vh;
+        }
+        #outer-div {
+            margin: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(158, 135, 105);
+            padding: 10px;
+            border: 1px solid rgb(154, 154, 242);
+        }
+        #inner-div {
+            margin: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            background-color: antiquewhite;
+            padding: 10px;
+            border: 1px solid rgb(154, 154, 242);
+        }
+
+        #inner-div button {
+            margin-left: 40px;
+            margin-right: 40px;
+            padding: 5px;
+            font-weight: bold;
+            color: blue;
+            background-color: rgb(153, 233, 135);
+            border: 2px solid rgb(154, 154, 242);
+            transition: all 200ms ease-in-out;
+        }
+        #inner-div button:hover{
+            background-color: rgb(45, 245, 0);
+            border: 2px solid rgb(154, 154, 242);
+            transform: scale(1.05);
+        }
+        .inner-div button:active{
+            border: 1px;
+        }
+    </style>
+    </head>
+        <body> 
+            <div class="container" id="outer-div">
+                <h2>clicking the start button will start changing the colors</h2>
+                <div class="container" id="inner-div">
+                    <button class="button" id="start">start</button>
+                    <button class="button" id="stop">stop</button>
+                </div>
+            </div>
+            <a class="hyperlink-as-button" href="../index.html"> Back To Home page</a>
+
+            <!-- script -->
+             <script>
+                let startButton = document.getElementById("start")
+                let stopButton = document.getElementById("stop")
+                let intervalId
+                let randomColor = () => {
+                    let hexcode = "#"
+                    const hexString = "0123456789ABCDEF"
+                    for(let i=1 ; i<=6 ; i++) {   
+                        hexcode += hexString[Math.floor(Math.random()*16)]
+                    }
+                    return hexcode
+                }
+                let startColorChanger = () => {
+                    console.log('clicked the start color chagner')
+                    if(!intervalId) {
+                        intervalId = setInterval(()=>{
+                            document.body.style.backgroundColor = randomColor()
+                        } , 1000)
+                    }
+                }
+                let stopColorChanger = () => {
+                    console.log('clicked the stop color chagner')
+                    clearInterval(intervalId)
+                    intervalId = null;
+                }
+
+                startButton.addEventListener('click', startColorChanger, false)
+                stopButton.addEventListener('click', stopColorChanger, false)
+             </script>
+        </body>
+    </html>

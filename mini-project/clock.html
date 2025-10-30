@@ -10,25 +10,41 @@
             border: 2px solid black;
             width: 200px;
             height: 200px;
+            border-radius: 50%;
             background-color:antiquewhite;
         }
         #time-box{
             border: 2px solid black;
             width: 75%;
             height: 30%;
+            border-radius: 50%;
             background-color:aquamarine;
         }
-        body,div{
+        body{
+            width: 100vw;
+            height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
         }
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #time-box{
+            margin: 10px;
+        }
+        #time-bar{
+            margin: 40px;
+        }
     </style>
 </head>
 <body>
-    <h3>clock</h3>
     <div id="time-bar">
+        <h3>clock</h3>
         <div id="time-box">
             <h5 id="time">Default Time</h5>
         </div>
