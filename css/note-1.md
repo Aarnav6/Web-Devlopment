@@ -62,7 +62,12 @@ the items inside the will also be affected
     transform: translate(30px,30px); /* moves towards both axis by 30px */
     transform: translateX(30px); /* moves towards the x axis by 30px */
     transform: translateY(30px); /* moves towards the y axis by 30px */
+
+    transform: skew(40deg); /* it is like pulling the element from both sides*/
+    transform: skewX(40deg); /* it is like pulling the element from both x axis*/
+    transform: skewY(40deg); /* it is like pulling the element from both y axis*/
 }
+
 
 ```
 
